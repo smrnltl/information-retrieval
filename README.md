@@ -1,4 +1,4 @@
-# Unified Academic Tools
+# Information Retireval - Smaran
 
 A combined web application featuring an Academic Search Engine and Document Classifier with a modern, unified interface.
 
