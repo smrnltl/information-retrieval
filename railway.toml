@@ -1,0 +1,15 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "./start.sh"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+[env]
+PORT = { default = "8000" }
+ENVIRONMENT = { default = "production" }
+WORKERS = { default = "4" }
+HOST = { default = "0.0.0.0" }
