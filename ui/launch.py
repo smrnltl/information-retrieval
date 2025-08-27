@@ -18,13 +18,14 @@ def launch_unified_app():
     # Change to UI directory
     ui_dir = Path(__file__).parent
     os.chdir(ui_dir)
-    
+
+    port = os.environ.get("PORT", "8000")
     try:
         # Launch FastAPI with uvicorn
         process = subprocess.Popen([
             sys.executable, "-m", "uvicorn", "main:app",
             "--host", "0.0.0.0",
-            "--port", "8000",
+            "--port", port,
             "--reload"
         ])
         
