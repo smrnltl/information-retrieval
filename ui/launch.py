@@ -26,7 +26,7 @@ def launch_unified_app():
             sys.executable, "-m", "uvicorn", "main:app",
             "--host", "0.0.0.0",
             "--port", port,
-            "--reload"
+            #"--reload"
         ])
         
         # Wait a moment for server to start
