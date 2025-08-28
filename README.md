@@ -190,7 +190,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 │                    Core Processing Layer                        │
 ├─────────────────────┬─────────────────────┬─────────────────────┤
 │   Search Engine     │  Document Classifier│  Crawler Scheduler  │
-│   (TF-IDF Ranking)  │  (Logistic Regr.)  │  (Job Management)   │
+│   (TF-IDF Ranking)  │  (Naive Bayes)      │  (Job Management)   │
 └─────────────────────┴─────────────────────┴─────────────────────┘
                                 │
 ┌─────────────────────────────────────────────────────────────────┐
@@ -383,13 +383,6 @@ The system follows a **modular, service-oriented architecture** with clear separ
 - **Analytics Dashboard**: Advanced usage analytics and performance monitoring
 
 ## 📚 Documentation
-
-### Comprehensive Documentation Available
-- **`task-1/PROJECT_METHODOLOGY.md`**: Complete search engine methodology (48 pages)
-- **`task-2/PROJECT_METHODOLOGY.md`**: Document classification methodology (42 pages)  
-- **`task-1/Academic_Search_Engine_Documentation.md`**: Technical documentation
-- **`task-2/ML_DOCUMENTATION.md`**: Machine learning implementation details
-- **`DEPLOYMENT_GUIDE.md`**: Production deployment instructions
 
 ### Academic Context
 This project demonstrates practical implementation of Information Retrieval concepts including:
