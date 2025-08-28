@@ -15,8 +15,8 @@ This repository contains the complete solution for an Information Retrieval cour
 
 ### 📋 Task 2: Document Classification System
 - **Objective**: Multi-class text classification (Politics, Business, Health)
-- **Algorithm**: Logistic Regression with TF-IDF vectorization
-- **Accuracy**: 95.7% on test dataset (22/23 correct predictions)
+- **Algorithm**: Calibrated Multinomial Naive Bayes with TF-IDF vectorization
+- **Accuracy**: 95.65% on test dataset (22/23 correct predictions)
 - **Dataset**: 114 full-length articles from international news sources
 - **Features**: Real-time classification with confidence scores and probability visualization
 
@@ -224,16 +224,17 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4
 
 ### Task 2: Document Classification System
 **Machine Learning Pipeline:**
-- **Algorithm**: Logistic Regression with L2 regularization (C=0.1)
-- **Feature Engineering**: TF-IDF vectorization (10,000 features + bigrams)
+- **Algorithm**: Calibrated Multinomial Naive Bayes (alpha=0.3)
+- **Calibration**: Isotonic regression with 5-fold cross-validation
+- **Feature Engineering**: TF-IDF vectorization (15,000 features + trigrams)
 - **Training Data**: 114 full-length articles from international sources
 - **Preprocessing**: Text normalization, stopword removal, tokenization
 
 **Model Performance:**
-- **Accuracy**: 95.7% on test dataset (22/23 correct predictions)
-- **Precision**: 96.1% weighted average
-- **Recall**: 95.6% weighted average  
-- **F1-Score**: 95.9% weighted average
+- **Accuracy**: 95.65% on test dataset (22/23 correct predictions)
+- **Precision**: 96.14% weighted average
+- **Recall**: 95.65% weighted average  
+- **F1-Score**: 95.61% weighted average
 - **Inference Speed**: <100ms per document
 
 **Dataset Composition:**
@@ -315,12 +316,12 @@ CREATE TABLE crawl_jobs (
 ### Classification Model Performance
 | Metric | Value | Details |
 |--------|-------|---------|
-| **Overall Accuracy** | 95.7% | 22/23 correct predictions |
-| **Weighted Precision** | 96.1% | Across all categories |
-| **Weighted Recall** | 95.6% | Balanced performance |
-| **F1-Score** | 95.9% | Harmonic mean of precision/recall |
+| **Overall Accuracy** | 95.65% | 22/23 correct predictions |
+| **Weighted Precision** | 96.14% | Across all categories |
+| **Weighted Recall** | 95.65% | Balanced performance |
+| **F1-Score** | 95.61% | Harmonic mean of precision/recall |
 | **Inference Time** | <100ms | Per document classification |
-| **Training Time** | 0.8s | Model convergence |
+| **Training Time** | 0.3s | Model convergence |
 
 ### Category-Specific Performance
 | Category | Precision | Recall | F1-Score | Support |
