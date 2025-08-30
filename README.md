@@ -20,6 +20,8 @@ This repository contains the complete solution for an Information Retrieval cour
 - **Dataset**: 114 full-length articles from international news sources
 - **Features**: Real-time classification with confidence scores and probability visualization
 
+## Demo: https://ir-smrnltl.up.railway.app/
+
 ## 📁 Project Structure
 
 ```
